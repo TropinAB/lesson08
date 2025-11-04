@@ -15,8 +15,8 @@ function isWord(str) {
 // значение числа a, возведённого в степень x.
 function pow(a, x) {
     let res = 1;
-    for (let i=0; i<x; i++) res *= a;
-    return res;
+    for (let i=0; i<Math.abs(x); i++) res *= a;
+    return x >= 0 ? res : 1/res;
 }
 
 console.log(diff(15, 21));
