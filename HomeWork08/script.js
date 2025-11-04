@@ -2,17 +2,22 @@
 // ДД.ММ.ГГГГ. Напишите программу, выводящую день
 // недели по введённой дате.
 const weekDays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+function DayOfWeek(strDate) {
+    const [d='01',m='01',y='1970'] = sDate.split('.');
+    const date = new Date(`${y}-${m}-${d}`);
+    return weekDays[date.getDay()];
+}
 const sDate = prompt('ДД.ММ.ГГГГ');
-const [d='01',m='01',y='1970'] = sDate.split('.');
-const date = new Date(`${y}-${m}-${d}`);
-console.log(weekDays[date.getDay()]);
+console.log(DayOfWeek(sDate));
 
 // 2.Написать программу, которая выводит в консоль
 // количество минут, прошедшее с начала сегодняшнего
 // дня.
-const now = new Date();
-const diff = now.getHours() * 60 + now.getMinutes();
-console.log(diff);
+function MinuteOfDay() {
+    const now = new Date();
+    return now.getHours() * 60 + now.getMinutes();
+}
+console.log(MinuteOfDay());
 
 // 3.*В двух переменных хранятся даты рождения двух
 // пользователей в формате ДД.ММ.ГГГГ. Написать
