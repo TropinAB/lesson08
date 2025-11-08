@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import globals from "globals";
 import { defineConfig } from "eslint/config";
+import jest from 'eslint-plugin-jest';
 
 export default defineConfig([
   { 
@@ -13,4 +14,8 @@ export default defineConfig([
     extends: ["js/recommended"], 
     languageOptions: { globals: {...globals.browser, ...globals.node} } 
   },
+  {
+    files: ["./**/*.test.js"],
+    ...jest.configs['flat/recommended'],
+  }
 ]);
