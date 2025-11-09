@@ -5,7 +5,9 @@ import jest from 'eslint-plugin-jest';
 
 export default defineConfig([
   { 
-    files: ["**/*.{js,mjs,cjs}"], 
+    files: [
+      "./HomeWork**/**/*.{js,mjs,cjs}"
+    ], 
     plugins: { js }, 
     rules: {
       ...js.configs.recommended.rules,
@@ -15,7 +17,7 @@ export default defineConfig([
     languageOptions: { globals: {...globals.browser, ...globals.node} } 
   },
   {
-    files: ["./**/*.test.js"],
+    files: ["HomeWork**/**/*.test.js"],
     ...jest.configs['flat/recommended'],
   }
 ]);

@@ -14,10 +14,11 @@
   },
   "scripts": {
     "test": "jest",
+    "lint": "eslint",
     "prepare": "husky"
   },
   "lint-staged": {
-    "src/**/*.js": "eslint"
+    "HomeWorks**/**/*.js": "eslint"
   },
   "name": "lesson08",
   "version": "1.0.0",
