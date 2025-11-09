@@ -30,5 +30,5 @@ if (String(number).length == 3 && number >= 100 && number < 1000) {
 
     console.log(`Сумма цифр = ${sum}`);
 } else {
-    console.error('Вы ввели НЕ трёхзначное число!')
+    console.error('Вы ввели НЕ трёхзначное число!');
 }
