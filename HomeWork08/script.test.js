@@ -8,7 +8,9 @@ describe("Check fuction DayOfWeek", () => {
 describe("Check fuction MinuteOfDay", () => {
     //Выполнимость теста будет зависеть от времени запуска.
     //Как правильно делать такие проверки?
-    const now = new Date();
-    const minuteOfDay = now.getHours() * 60 + now.getMinutes();
-    it("MinuteOfDay() = minuteOfDay", () => expect(MinuteOfDay()).toBe(minuteOfDay));
+    it("MinuteOfDay() = minuteOfDay", () => {
+        const now = new Date();
+        const minuteOfDay = now.getHours() * 60 + now.getMinutes();
+        expect(MinuteOfDay()).toBe(minuteOfDay);
+    });
 });
